@@ -1,12 +1,11 @@
-const NO_SLEEP_URL =
-  "./NoSleep.min.js";
-const PYODIDE_URL = "./pyodide.js";
+const NO_SLEEP_URL = "pyxel/NoSleep.min.js";
+const PYODIDE_URL = "pyxel/pyodide.js";
 const PYXEL_WHEEL_PATH = "pyxel-2.0.13-cp37-abi3-emscripten_3_1_53_wasm32.whl";
-const PYXEL_LOGO_PATH = "./images/pyxel_logo_76x32.png";
-const TOUCH_TO_START_PATH = "./images/touch_to_start_114x14.png";
-const CLICK_TO_START_PATH = "./images/click_to_start_114x14.png";
-const GAMEPAD_CROSS_PATH = "./images/gamepad_cross_98x98.png";
-const GAMEPAD_BUTTON_PATH = "./images/gamepad_button_98x98.png";
+const PYXEL_LOGO_PATH = "images/pyxel_logo_76x32.png";
+const TOUCH_TO_START_PATH = "images/touch_to_start_114x14.png";
+const CLICK_TO_START_PATH = "images/click_to_start_114x14.png";
+const GAMEPAD_CROSS_PATH = "images/gamepad_cross_98x98.png";
+const GAMEPAD_BUTTON_PATH = "images/gamepad_button_98x98.png";
 const PYXEL_WORKING_DIRECTORY = "/pyxel_working_directory";
 const PYXEL_WATCH_INFO_FILE = ".pyxel_watch_info";
 
@@ -29,7 +28,7 @@ function _scriptDir() {
 function _setIcon() {
   let iconLink = document.createElement("link");
   iconLink.rel = "icon";
-  iconLink.href = _scriptDir() + "./images/pyxel_icon_64x64.ico";
+  iconLink.href = _scriptDir() + "images/pyxel_icon_64x64.ico";
   document.head.appendChild(iconLink);
 }
 

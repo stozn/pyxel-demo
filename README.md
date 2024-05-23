@@ -1,27 +1,22 @@
 # Pyxel 打包成本地网页Demo
 
 我把pyxel生成的网页所需的资源全部下载了，这样就可以完全不依赖外部资源了。  
-如果想便捷可以直接使用打包后生成的`app.html`文件，这个文件可以直接浏览器打开。 
 
-`app`：存放源代码和素材
-`html`：存放打包生成的html文件以及依赖资源
-`images`：存放`README.md`中使用的图片
 
+直接修改`app/main.py`
+然后在`app`文件夹下启动http服务器
 
 ## 快速开始
-
 ```bash
 # 安装Pyxel
 pip install pyxel
 
-# 打包成网页
-make
-
 # 启动http服务器
-cd html
+cd app
 python -m http.server 8080
 ```
 然后在浏览器打开 [http://localhost:8080](http://localhost:8080)
+
 
 # 以下为官方说明
 
@@ -483,7 +478,7 @@ Pyxel 应用程序文件也可以通过`pyxel app2exe`或`pyxel app2html`命令�
   当前鼠标滚轮的值。
 
 - `btn(key)`<br>
-  如果`key`被按下则返回`True`，否则返回`False`。([按键定义列表](../python/pyxel/__init__.pyi))。
+  如果`key`被按下则返回`True`，否则返回`False`。([按键定义列表](app/pyxel/pyxel.pyi))。
 
 - `btnp(key, [hold], [repeat])`<br>
   如果`key`被按下则返回`True`。若设置了`hold`和`repeat`参数，则当`key`被按下持续`hold`帧时，在`repeat`帧间隙返回`True`。
@@ -715,7 +710,7 @@ Pyxel 应用程序文件也可以通过`pyxel app2exe`或`pyxel app2html`命令�
 
 Pyxel 还有一些“高级 API”，出于“可能令用户感到迷惑”、“需要专业知识”等一些原因，在本文尚未提及。
 
-如果你对自己的技术很熟悉，可以参阅[this](../python/pyxel/__init__.pyi)，尝试挑战自己并创造一些神奇的作品！
+如果你对自己的技术很熟悉，可以参阅[this](app/pyxel/pyxel.pyi)，尝试挑战自己并创造一些神奇的作品！
 
 ## 如何参与
 
